@@ -178,3 +178,18 @@ h4 {
   background-position: 1em 0.5em;
 }
 
+/* =========================
+   Enlarge VT logo in navbar
+   ========================= */
+
+.navbar-brand img {
+  height: 42px;        /* ← 核心：放大 logo */
+  width: auto;         /* 保持比例 */
+  margin-right: 12px;  /* logo 和文字间距 */
+  vertical-align: middle;
+}
+
+.navbar {
+  min-height: 64px;
+}
+
