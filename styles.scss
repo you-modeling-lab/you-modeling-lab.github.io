@@ -177,3 +177,22 @@ h4 {
   background-size: 1em;
   background-position: 1em 0.5em;
 }
+
+
+/* =========================
+   Fixed navbar (always visible)
+   ========================= */
+
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;          /* 确保在内容之上 */
+}
+
+
+/* Offset page content for fixed navbar */
+body {
+  padding-top: 110px;    /* ≈ 你的 navbar 实际高度 */
+}
