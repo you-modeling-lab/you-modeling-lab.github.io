@@ -18,6 +18,8 @@ website:
     
   navbar: 
     background: "#861F41"
+    logo: images/VTLogo.png
+    title: "Agroecosystem Modeling Lab"
     search: true
     right: 
       - text: "Home"
