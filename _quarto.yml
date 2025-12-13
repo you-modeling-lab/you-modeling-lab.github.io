@@ -4,7 +4,7 @@ project:
   
 website:
   page-navigation: true
-  title: "Yujun Lian"
+  title: "Agroecosystem Modeling Lab"
   site-url: https://you-modeling-lab.github.io
   favicon: images/site-logo.png
   repo-url: https://github.com/you-modeling-lab/you-modeling-lab.github.io
