@@ -1,6 +1,17 @@
 /*-- scss:defaults --*/
 
-/* 主题颜色定义 */
+/*-- scss:defaults --*/
+
+/* =========================
+   Virginia Tech Colors
+   ========================= */
+$vt-maroon: #861F41;
+$vt-orange: #E87722;
+$vt-maroon-soft: #982649;   /* 较柔和版本 */
+$vt-dark: #2C2C2C;
+$vt-light: #F5F5F5;
+
+/* 主题颜色定义（保留原有变量，避免影响其它引用） */
 $theme-black: #4c4c4c;
 $theme-white: white;
 $theme-grey: #e9ecef;
@@ -25,30 +36,30 @@ $theme-pumpkin: #d05808;
 $theme-darkgreen1: #355E3B;
 $theme-darkgreen2: #445740;
 
-/* 新增红色变量定义 */
-$red: #ff0000; /* 定义红色变量 */
-$blue: #0000ff;  /* 定义蓝色变量 */
+/* 原有红蓝变量（保留，但不再用于站点主题） */
+$red: #ff0000;
+$blue: #0000ff;
 
-/* 主要背景和字体颜色 */
+/* 主要背景和字体颜色（改为 VT 风格） */
 $body-bg: $theme-white;
-$body-color: $theme-darkcoffee1; /* 正文字体颜色 */
-$headings-color: $theme-milkcoffee2; /* 标题字体颜色 */
-$link-color: $red; /* 默认超链接颜色 */
+$body-color: $vt-dark;        /* 正文字体颜色 */
+$headings-color: $vt-maroon;  /* 标题字体颜色 */
+$link-color: $vt-maroon;      /* 默认超链接颜色 */
 
-/* 代码样式 */
-$code-color: $theme-mocha2; /* 代码文本颜色 */
-$code-bg: $theme-milkcoffee0; /* 代码背景颜色 */
-$code-block-bg-alpha: -0.8; /* 代码块背景的透明度 */
-$background-color: $theme-milkcoffee0; /* 页面背景色 */
+/* 代码样式（保留原风格） */
+$code-color: $theme-mocha2;
+$code-bg: $theme-milkcoffee0;
+$code-block-bg-alpha: -0.8;
+$background-color: $theme-milkcoffee0;
 
-/* 导航栏 */
-$navbar-bg: $theme-darkgreen1; /* 导航栏背景颜色 */
+/* 导航栏（改为 VT Maroon） */
+$navbar-bg: $vt-maroon;
 
-/* 提示框颜色 */
-$callout-color-note: $theme-darkgreen2; /* 提示框的注释颜色 */
-$callout-color-tip: $theme-darkgreen1; /* 提示框的小贴士颜色 */
+/* 提示框颜色（改为 VT 系） */
+$callout-color-note: $vt-maroon-soft;
+$callout-color-tip: $vt-maroon;
 
-/* 字体设置 */
+/* 字体设置（保留原有） */
 @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code_Pro&display=swap');
@@ -58,82 +69,100 @@ $callout-color-tip: $theme-darkgreen1; /* 提示框的小贴士颜色 */
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
-$font-family-sans-serif: 'Lato', sans-serif; /* 无衬线字体 */
-$font-family-monospace: 'Source Code Pro', monospace; /* 等宽字体 */
+$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-monospace: 'Source Code Pro', monospace;
 $font-poppins: 'Poppins', sans-serif; 
 $font-pt: 'PT Serif', sans-serif;
 $font-cabin: 'Cabin', sans-serif;
 $font-montserrat: 'Montserrat', sans-serif;
 $font-prompt: 'Prompt', sans-serif;
 
-$font-size-root: 16px; /* 根字体大小 */
+$font-size-root: 16px;
 
-/* 链接颜色 */
-$link-color: $red; /* 链接的颜色为红色 */
-$link-hover-color: $blue; /* 链接悬停时的颜色 */
+/* 链接悬停颜色（改为 VT Orange） */
+$link-hover-color: $vt-orange;
+
 
 /*-- scss:rules --*/
 
 /* 1. 正文行间距和字体颜色调整 */
 body {
-  line-height: 1.7; /* 正文的行间距设置为 1.7 */
-  color: #000000; /* 正文字体颜色为黑色 */
+  line-height: 1.7;
+  color: $vt-dark; /* 改为 VT 深灰，避免硬编码黑色 */
 }
 
 /* 2. 列表项的行间距调整 */
 ul, ol {
-  line-height: 1.7; /* 列表项的行间距设置为 1.7 */
+  line-height: 1.7;
 }
 
-/* 3. 超链接颜色和悬停颜色调整 */
+/* 3. 超链接颜色和悬停颜色调整（改为 VT） */
 a {
-  color: #0066cc; /* 超链接的颜色设置为蓝色 */
-  text-decoration: none; /* 去除默认的下划线 */
+  color: $vt-maroon;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #006400; /* 悬停时的颜色设置为深绿色 */
+  color: $vt-orange;
+  text-decoration: underline;
 }
 
-/* 4. 代码样式高亮调整，背景为浅灰色，github 风格 */
+/* 4. 代码样式高亮调整，背景为浅灰色，github 风格（保留原风格） */
 code {
-  color: #d63384; /* 代码文本的颜色，使用 GitHub 风格的红色 */
-  background-color: #f5f5f5; /* 代码块的背景色为浅灰色 */
-  padding: 2px 4px; /* 增加内边距，使代码更加突出 */
-  border-radius: 3px; /* 为代码块添加圆角 */
-  font-family: Consolas, 'Courier New', monospace; /* 设置字体为等宽字体 */
+  color: #d63384;
+  background-color: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: Consolas, 'Courier New', monospace;
 }
 
-/* 标题样式 */
+/* 导航栏强制使用 VT Maroon（防止被主题/Bootstrap 覆盖） */
+.navbar {
+  background-color: $vt-maroon !important;
+}
+
+.navbar a,
+.navbar-brand,
+.navbar .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar a:hover,
+.navbar .nav-link:hover {
+  color: $vt-orange !important;
+}
+
+/* 标题样式（改为 VT） */
 h1 {
-  color: $theme-darkcoffee3;
+  color: $vt-maroon;
   font-family: $font-pt;
   font-size: 40px;
 }
 
 h2 {
-  color: $theme-darkcoffee3;
+  color: $vt-maroon;
   font-family: $font-pt;
   font-size: 30px;
 }
 
 h3, h4 {
-  color: $theme-mocha1;
+  color: $vt-maroon-soft;
   font-family: $font-pt;
 }
 
+/* 你原来 h4 是深绿，这里改为 VT 橙强调（可选） */
 h4 {
-  color: $theme-darkgreen1;
+  color: $vt-orange;
 }
 
-/* 代码块和推送样式 */
+/* 代码块和推送样式（保留原结构，只微调边框色为 VT） */
 .render-commit-push {
   padding: 0.5em 0.5em 0em 3em;
   margin-top: 5px;
   margin-bottom: 5px;
   background: #f8f8f8 5px center/3em no-repeat;
-  border-top: 1px solid #5B888C;
-  border-bottom: 1px solid #5B888C;
+  border-top: 1px solid $vt-maroon-soft;
+  border-bottom: 1px solid $vt-maroon-soft;
   background-size: 2em;
   background-position: 0.5em 0.5em;
 }
@@ -143,8 +172,9 @@ h4 {
   margin-top: 5px;
   margin-bottom: 5px;
   background: #f8f8f8 5px center/3em no-repeat;
-  border-top: 1px solid #E0A890;
-  border-bottom: 1px solid #E0A890;
+  border-top: 1px solid $vt-orange;
+  border-bottom: 1px solid $vt-orange;
   background-size: 1em;
   background-position: 1em 0.5em;
 }
+
