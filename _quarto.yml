@@ -6,7 +6,7 @@ website:
   page-navigation: true
   title: "Agroecosystem Modeling Lab"
   site-url: https://you-modeling-lab.github.io
-  favicon: images/site-logo.png
+  favicon: images/VT_Original.png
   repo-url: https://github.com/you-modeling-lab/you-modeling-lab.github.io
   repo-actions: [edit, issue]
   
@@ -18,7 +18,7 @@ website:
     
   navbar: 
     background: "#861F41"
-    logo: images/VTLogo.png
+    logo: images/Vertical_VT_White_CMYK.png
     title: "Agroecosystem Modeling Lab"
     search: true
     right: 
