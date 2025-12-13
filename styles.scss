@@ -177,67 +177,53 @@ h4 {
   background-size: 1em;
   background-position: 1em 0.5em;
 }
-
 /* =========================
-   Force enlarge Quarto navbar logo (SVG + IMG)
+   VT logo: force enlarge (covers img/svg/icon fonts)
+   Put this at the VERY END of styles.scss
    ========================= */
 
-.navbar .navbar-brand .navbar-logo {
-  height: 48px !important;
-  width: auto !important;
-}
-
-.navbar .navbar-brand .navbar-logo img {
-  height: 48px !important;
-  width: auto !important;
-}
-
-.navbar .navbar-brand .navbar-logo svg {
-  height: 48px !important;
-  width: auto !important;
-}
-
-.navbar {
-  min-height: 72px;
-}
-
+/* 让 navbar 不压缩品牌区 */
 .navbar .navbar-brand {
-  gap: 12px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  line-height: 1 !important;
 }
 
-/* =========================
-   FORCE VT LOGO REALLY BIG
-   ========================= */
-
-/* 1. 强制抬高整个 navbar */
-.navbar {
-  min-height: 90px !important;   /* ← 关键：直接拉高 */
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+/* 解除可能的 max-height 限制 */
+.navbar .navbar-brand * {
+  max-height: none !important;
 }
 
-/* 2. 强制放大 Quarto logo 容器 */
+/* Quarto logo 容器（如果存在） */
 .navbar .navbar-brand .navbar-logo {
-  height: 64px !important;       /* ← 直接用 64px */
+  height: 80px !important;
   width: auto !important;
 }
 
-/* 3. 针对 img */
-.navbar .navbar-brand .navbar-logo img {
-  height: 64px !important;
+/* PNG/JPG */
+.navbar .navbar-brand img {
+  height: 80px !important;
   width: auto !important;
 }
 
-/* 4. 针对 svg（VT logo 常见） */
-.navbar .navbar-brand .navbar-logo svg {
-  height: 64px !important;
+/* SVG */
+.navbar .navbar-brand svg {
+  height: 80px !important;
   width: auto !important;
 }
 
-/* 5. 如果 Quarto/Bootstrap 仍然压缩，用 scale 兜底 */
-.navbar .navbar-brand {
-  transform: scale(1.15);        /* ← 兜底放大 */
-  transform-origin: left center;
-  gap: 14px;
+/* 如果 logo 实际是“图标字体”(i/span) */
+.navbar .navbar-brand i,
+.navbar .navbar-brand span {
+  font-size: 80px !important;
+  line-height: 1 !important;
+}
+
+/* navbar 高度跟着走 */
+.navbar {
+  min-height: 110px !important;
+  padding-top: 0.6rem !important;
+  padding-bottom: 0.6rem !important;
 }
 
