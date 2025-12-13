@@ -214,4 +214,48 @@ h4 {
   padding-bottom: 0.4rem !important;
 }
 
+/* =========================
+   Fix blurry navbar text + restore font
+   ========================= */
+
+/* 1) 彻底禁止 navbar 的 transform（transform 会让文字发糊） */
+.navbar,
+.navbar * {
+  transform: none !important;
+}
+
+/* 2) brand 布局 */
+.navbar .navbar-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  line-height: 1 !important;
+}
+
+/* 3) 只放大 logo（不要动文字） */
+.navbar .navbar-brand .navbar-logo,
+.navbar .navbar-brand .navbar-logo img,
+.navbar .navbar-brand .navbar-logo svg {
+  height: 72px !important;     /* 需要更大就改这里：72/80 */
+  width: auto !important;
+  max-height: none !important;
+}
+
+/* 4) 明确指定标题字体，避免“像换字体” */
+.navbar .navbar-brand .navbar-title,
+.navbar .navbar-brand .navbar-title a {
+  font-family: 'Lato', sans-serif !important;   /* 你原本的全站字体 */
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 5) navbar 高度 */
+.navbar {
+  min-height: 96px !important;
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important;
+}
 
