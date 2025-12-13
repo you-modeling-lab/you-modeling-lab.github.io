@@ -179,17 +179,29 @@ h4 {
 }
 
 /* =========================
-   Enlarge VT logo in navbar
+   Force enlarge Quarto navbar logo (SVG + IMG)
    ========================= */
 
-.navbar-brand img {
-  height: 42px;        /* ← 核心：放大 logo */
-  width: auto;         /* 保持比例 */
-  margin-right: 12px;  /* logo 和文字间距 */
-  vertical-align: middle;
+.navbar .navbar-brand .navbar-logo {
+  height: 48px !important;
+  width: auto !important;
+}
+
+.navbar .navbar-brand .navbar-logo img {
+  height: 48px !important;
+  width: auto !important;
+}
+
+.navbar .navbar-brand .navbar-logo svg {
+  height: 48px !important;
+  width: auto !important;
 }
 
 .navbar {
-  min-height: 64px;
+  min-height: 72px;
+}
+
+.navbar .navbar-brand {
+  gap: 12px;
 }
 
