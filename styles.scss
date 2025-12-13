@@ -205,3 +205,39 @@ h4 {
   gap: 12px;
 }
 
+/* =========================
+   FORCE VT LOGO REALLY BIG
+   ========================= */
+
+/* 1. 强制抬高整个 navbar */
+.navbar {
+  min-height: 90px !important;   /* ← 关键：直接拉高 */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* 2. 强制放大 Quarto logo 容器 */
+.navbar .navbar-brand .navbar-logo {
+  height: 64px !important;       /* ← 直接用 64px */
+  width: auto !important;
+}
+
+/* 3. 针对 img */
+.navbar .navbar-brand .navbar-logo img {
+  height: 64px !important;
+  width: auto !important;
+}
+
+/* 4. 针对 svg（VT logo 常见） */
+.navbar .navbar-brand .navbar-logo svg {
+  height: 64px !important;
+  width: auto !important;
+}
+
+/* 5. 如果 Quarto/Bootstrap 仍然压缩，用 scale 兜底 */
+.navbar .navbar-brand {
+  transform: scale(1.15);        /* ← 兜底放大 */
+  transform-origin: left center;
+  gap: 14px;
+}
+
