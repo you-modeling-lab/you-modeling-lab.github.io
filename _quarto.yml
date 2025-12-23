@@ -24,17 +24,17 @@ website:
     right: 
       - text: "Home"
         href: index.qmd
+      - text: "Research"
+        href: blog.qmd
+      - text: "People"
+        href: books.qmd
       - text: "Publications"
         href: publications.qmd
-      - text: "Books"
-        href: books.qmd
-      - text: "Blogs"
-        href: blog.qmd
-      - text: "Codes"
+      - text: "News"
         href: codes.qmd
-      - text: "中文"
+      - text: "Resources"
         href: Chinese.qmd
-      - text: "CV"
+      - text: "Opportunities"
         href: CV.pdf
 
 format:
