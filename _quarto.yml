@@ -19,7 +19,7 @@ website:
   navbar: 
     background: "#861F41"
     logo: images/VT_White_Small.png
-    title: "    Agroecosystem Modeling Lab"
+    title: "Agroecosystem Modeling Lab"
     search: true
     right: 
       - text: "Home"
