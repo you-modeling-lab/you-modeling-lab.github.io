@@ -616,3 +616,20 @@ a:hover { color: #E87722 !important; }
 #footer h3 {
   color: #E87722 !important;
 }
+
+/* Ensure header text stays white on VT maroon background */
+.jumbotron h1,
+.jumbotron .lead {
+  color: #ffffff !important;
+}
+
+/* Optional: reduce the dark overlay so text is clearer */
+.jumbotron:after {
+  opacity: 0.10 !important;
+}
+
+/* Optional: make the title pop a bit more */
+.jumbotron h1 {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.35) !important;
+}
+
