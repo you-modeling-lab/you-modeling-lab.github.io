@@ -576,3 +576,43 @@ ul.sponsors {
 	color: rgba(255,255,255,0.75);
 	font-size: 11px;
 }
+
+/* ===== VT FORCE OVERRIDES (put at VERY BOTTOM) ===== */
+.jumbotron {
+  background: #861F41 !important;
+  background-image: none !important;
+  color: #fff !important;
+}
+
+.navbar .navbar-inner,
+.navbar-inner {
+  background: #861F41 !important;
+  background-image: none !important;
+  border: none !important;
+}
+
+.navbar .nav > li > a {
+  color: #fff !important;
+}
+
+.navbar .nav > li > a:hover,
+.navbar .nav > .active > a {
+  background: #E87722 !important;
+  color: #fff !important;
+}
+
+h1, h2, h3, h4 {
+  color: #861F41 !important;
+}
+
+a { color: #861F41 !important; }
+a:hover { color: #E87722 !important; }
+
+#footer {
+  background: #2C2A29 !important;
+  border-top-color: #861F41 !important;
+}
+
+#footer h3 {
+  color: #E87722 !important;
+}
