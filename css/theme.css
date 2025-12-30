@@ -1,6 +1,7 @@
 body {
 	padding-top: 15px;
 	padding-bottom: 0px;
+	color: #2C2A29; /* VT dark neutral */
 }
 
 
@@ -37,8 +38,8 @@ body {
 .navbar .nav li a {
 	font-weight: bold;
 	text-align: center;
-	border-left: 1px solid rgba(255, 255, 255, .75);
-	border-right: 1px solid rgba(0, 0, 0, .1);
+	border-left: 1px solid rgba(255, 255, 255, .25); /* tuned for VT navbar */
+	border-right: 1px solid rgba(0, 0, 0, .15);       /* tuned for VT navbar */
 }
 
 .navbar .nav li:first-child a {
@@ -53,6 +54,24 @@ body {
 
 body>.navbar {
 	font-size: 13px
+}
+
+
+/* VT NAVBAR THEME (Bootstrap 2) */
+.navbar-inner {
+	background-color: #861F41; /* VT Maroon */
+	background-image: none;
+	border: none;
+}
+
+.navbar .nav li a {
+	color: #ffffff;
+}
+
+.navbar .nav li a:hover,
+.navbar .nav > .active > a {
+	background-color: #E87722; /* VT Orange */
+	color: #ffffff;
 }
 
 
@@ -186,8 +205,6 @@ body>.navbar .brand:hover {
 
 #media .post_row .post {
 	background: #fff;
-	/*margin-left: 0;;
-    margin-right: 20px;*/
 	border-radius: 4px;
 	box-shadow: 1px 1px 2px 0px #E0E0E0;
 	width: 487px;
@@ -342,7 +359,7 @@ body>.navbar .brand:hover {
 }
 
 .feature-item:hover {
-	box-shadow: 0px 1px 5px 1px rgb(216, 216, 216)
+	box-shadow: 0px 1px 6px 1px rgba(134, 31, 65, 0.35); /* VT maroon glow */
 }
 
 .feature-item img {
@@ -391,22 +408,31 @@ body>.navbar .brand:hover {
 	border-bottom: 1px solid #ddd;
 }
 
+/* VT HEADINGS + LINKS */
+h1, h2, h3, h4 {
+	color: #861F41;
+}
+
+a {
+	color: #861F41;
+}
+
+a:hover {
+	color: #E87722;
+	text-decoration: none;
+}
+
 .jumbotron {
 	position: relative;
 	padding: 45px 0px 35px 0px;
-	color: #fff;
+	color: #ffffff;
 	text-align: center;
-	text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
-	background: #30393C;
-	background: -moz-linear-gradient(45deg, #30393C 0%, #000000 100%);
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #30393C), color-stop(100%, #30393C));
-	background: -webkit-linear-gradient(45deg, #30393C 0%, #000000 100%);
-	background: -o-linear-gradient(45deg, #30393C 0%, #000000 100%);
-	background: -ms-linear-gradient(45deg, #30393C 0%, #000000 100%);
-	background: linear-gradient(45deg, #30393C 0%, #000000 100%) repeat;
-	-webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
-	-moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
-	box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+	text-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	background: #861F41; /* VT Maroon */
+	background: linear-gradient(135deg, #861F41 0%, #5E1025 100%);
+	-webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .25), inset 0 -3px 7px rgba(0, 0, 0, .25);
+	-moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .25), inset 0 -3px 7px rgba(0, 0, 0, .25);
+	box-shadow: inset 0 3px 7px rgba(0, 0, 0, .25), inset 0 -3px 7px rgba(0, 0, 0, .25);
 }
 
 .jumbotron:after {
@@ -417,7 +443,7 @@ body>.navbar .brand:hover {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	opacity: .4;
+	opacity: .2;
 }
 
 .lead {
@@ -518,8 +544,8 @@ ul.sponsors {
 	padding-bottom: 25px;
 	border-top-width: 8px;
 	border-top-style: solid;
-	border-top-color: #2F2F2F;
-	background-color: #000000;
+	border-top-color: #861F41; /* VT maroon */
+	background-color: #2C2A29; /* VT dark neutral */
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -531,10 +557,10 @@ ul.sponsors {
 	font-size: 19px;
 	text-transform: uppercase;
 	font-family: BebasNeueRegular;
-	color: #8DBECE;
+	color: #E87722; /* VT orange */
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: #30393C;
+	border-bottom-color: rgba(255,255,255,0.15);
 	line-height: 35px;
 	margin-bottom: 20px;
 	margin-top: 25px;
@@ -547,6 +573,6 @@ ul.sponsors {
 
 #footer p,
 #footer address {
-	color: #8F8F8F;
+	color: rgba(255,255,255,0.75);
 	font-size: 11px;
 }
