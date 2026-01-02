@@ -574,3 +574,19 @@ header#overview .lead {
 .navbar .nav > li > a {
   color: #000000 !important;
 }
+
+
+#footer .row-fluid {
+  display: flex;
+  align-items: center;   /* vertical centering */
+}
+
+#footer .span2 {
+  text-align: center;
+}
+
+#footer .span2 img {
+  display: inline-block;
+  max-width: 140px;   /* adjust if needed */
+  height: auto;
+}
