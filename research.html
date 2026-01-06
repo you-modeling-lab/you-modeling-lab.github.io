@@ -11,6 +11,26 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
       <link href="css/theme.css" rel="stylesheet">
+      <!-- Custom Styles -->
+      <style>
+         /* Add space between research sections */
+         section {
+             margin-bottom: 30px; /* Adjust space between sections */
+         }
+
+         /* Add space below the <hr> tags */
+         hr {
+             margin-top: 30px;  /* Add space above the <hr> */
+             margin-bottom: 30px; /* Add space below the <hr> */
+         }
+
+         /* Add padding to the images to avoid them sticking to text */
+         img {
+             margin-left: 20px; /* Add space on the left side */
+             margin-top: 10px;  /* Add space on the top side */
+             margin-bottom: 20px; /* Add space on the bottom side */
+         }
+      </style>
    </head>
    <body>
       <div class="container">
@@ -135,19 +155,8 @@
             </div>
          </div>
       </footer>
-
-      <!-- Le javascript
-         ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
+      <!-- Le javascript -->
       <script src="js/jquery-1.9.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
-      <script>
-         $(document).ready(function() {
-             $(document.body).scrollspy({
-                 target: "#navparent"
-             });
-         });
-         
-      </script>
    </body>
 </html>
