@@ -12,33 +12,40 @@
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
       <link href="css/theme.css" rel="stylesheet">
 
-      <!-- Custom Styles (Add these styles here) -->
+      <!-- Custom Styles -->
       <style>
-         /* Space between sections */
+         /* Flexbox to align text and images */
+         .research-section {
+             display: flex;
+             flex-direction: row; /* Align horizontally */
+             justify-content: space-between; /* Space out the content */
+             align-items: flex-start; /* Align items to the top */
+             margin-bottom: 30px; /* Space between sections */
+         }
+
+         /* Adjust image size and margins */
+         .research-section img {
+             max-width: 45%; /* Limit the size of the images */
+             margin-left: 20px; /* Space between image and text */
+             margin-top: 10px;  /* Top margin */
+         }
+
+         /* Add padding to text */
+         .research-section p {
+             width: 50%; /* Make sure text takes 50% of the width */
+             padding-right: 20px; /* Padding on the right for the text */
+         }
+
+         /* Optional: Add space between research sections */
          section {
-             margin-bottom: 50px; /* Increase space between sections */
-             padding-bottom: 20px; /* Optional: Padding inside sections */
+             margin-bottom: 50px;
          }
 
-         /* Space above and below the <hr> tags */
+         /* Optional: Adjust the <hr> lines */
          hr {
-             margin-top: 50px;  /* Increase space above the <hr> */
-             margin-bottom: 50px; /* Increase space below the <hr> */
+             margin-top: 40px;
+             margin-bottom: 40px;
              border: 1px solid #ccc;
-         }
-
-         /* Adjust image spacing */
-         img {
-             margin-left: 20px;
-             margin-top: 20px;
-             margin-bottom: 20px; /* Adjust spacing around images */
-             max-width: 45%; /* Resize images to prevent them from taking up too much space */
-         }
-
-         /* Optional: Add padding inside text sections for more spacing */
-         section p {
-             padding-left: 15px;
-             padding-right: 15px;
          }
       </style>
    </head>
@@ -91,49 +98,43 @@
                      </p>
                   </div>
                </section>
-               <section id="statemet">
-                  <div class="row-fluid">
-                     <div class="span12">
-                        <section id="research1">
-                           <h4>Agroecosystem Model Development</h4>
-                           <p>
-                              We develop agroecosystem models that represent crop and grassland growth, management practices, soil carbon and nitrogen cycling, water balance, and greenhouse gas emissions. 
-                              Our work includes process-based models, data-driven approaches, and hybrid frameworks that integrate mechanistic understanding with machine learning to 
-                              capture interactions among management, climate, and biophysical processes across field to regional scales.
-                           </p>
-                           <img src="images/ResearchArea1.jpg" class="float-right" alt="research1"/>
-                        </section>
-                        <hr>
-                        <section id="research2">
-                           <h4>Sustainable Agricultural Management Practices</h4>
-                           <p>
-                              We examine how agricultural management practices (e.g., tillage, cover cropping, irrigation, and nutrient management) influence productivity, yield stability, 
-                              soil health, and environmental outcomes. This research evaluates management strategies across cropping systems to identify practices that support long-term
-                              sustainability and resilience under variable environmental conditions.
-                           </p>
-                           <img src="images/ResearchArea2.jpg" class="float-right" alt="research2"/>
-                        </section>
-                        <hr>
-                        <section id="research3">
-                           <h4>Integrated Crop–Livestock Systems</h4>
-                           <p>
-                              We study integrated crop–livestock systems to understand how linking cropping and grazing affects productivity, resource use efficiency, soil carbon storage, 
-                              and greenhouse gas emissions. Our work focuses on cropland–livestock interactions, grazing management, and nutrient recycling, with an emphasis on system-level 
-                              tradeoffs and synergies.
-                           </p>
-                           <img src="images/ResearchArea3.jpg" class="float-right" alt="research3"/>
-                        </section>
-                        <hr>
-                        <section id="research4">
-                           <h4>Agroecosystem Responses to Climate Extremes and Environmental Change</h4>
-                           <p>
-                              We investigate how agroecosystems respond to CO2 fertilization, climate change, and extreme events such as droughts and heatwaves. Using models, remote sensing, 
-                              and observational data, this research assesses vulnerability, resilience, and recovery of agricultural systems under current and future environmental conditions.
-                           </p>
-                           <img src="images/ResearchArea4.jpg" class="float-right" alt="research4"/>
-                        </section>
-                     </div>
-                  </div>
+               <section id="research1" class="research-section">
+                  <h4>Agroecosystem Model Development</h4>
+                  <p>
+                     We develop agroecosystem models that represent crop and grassland growth, management practices, soil carbon and nitrogen cycling, water balance, and greenhouse gas emissions. 
+                     Our work includes process-based models, data-driven approaches, and hybrid frameworks that integrate mechanistic understanding with machine learning to 
+                     capture interactions among management, climate, and biophysical processes across field to regional scales.
+                  </p>
+                  <img src="images/ResearchArea1.jpg" class="float-right" alt="research1"/>
+               </section>
+               <hr>
+               <section id="research2" class="research-section">
+                  <h4>Sustainable Agricultural Management Practices</h4>
+                  <p>
+                     We examine how agricultural management practices (e.g., tillage, cover cropping, irrigation, and nutrient management) influence productivity, yield stability, 
+                     soil health, and environmental outcomes. This research evaluates management strategies across cropping systems to identify practices that support long-term
+                     sustainability and resilience under variable environmental conditions.
+                  </p>
+                  <img src="images/ResearchArea2.jpg" class="float-right" alt="research2"/>
+               </section>
+               <hr>
+               <section id="research3" class="research-section">
+                  <h4>Integrated Crop–Livestock Systems</h4>
+                  <p>
+                     We study integrated crop–livestock systems to understand how linking cropping and grazing affects productivity, resource use efficiency, soil carbon storage, 
+                     and greenhouse gas emissions. Our work focuses on cropland–livestock interactions, grazing management, and nutrient recycling, with an emphasis on system-level 
+                     tradeoffs and synergies.
+                  </p>
+                  <img src="images/ResearchArea3.jpg" class="float-right" alt="research3"/>
+               </section>
+               <hr>
+               <section id="research4" class="research-section">
+                  <h4>Agroecosystem Responses to Climate Extremes and Environmental Change</h4>
+                  <p>
+                     We investigate how agroecosystems respond to CO2 fertilization, climate change, and extreme events such as droughts and heatwaves. Using models, remote sensing, 
+                     and observational data, this research assesses vulnerability, resilience, and recovery of agricultural systems under current and future environmental conditions.
+                  </p>
+                  <img src="images/ResearchArea4.jpg" class="float-right" alt="research4"/>
                </section>
             </div>
          </div>
