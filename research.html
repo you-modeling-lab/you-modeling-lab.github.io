@@ -11,42 +11,6 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
       <link href="css/theme.css" rel="stylesheet">
-
-      <!-- Custom Styles -->
-      <style>
-         /* Flexbox layout for text and image side by side */
-         .research-section {
-             display: flex;
-             flex-wrap: wrap; /* Allow wrapping for responsive design */
-             justify-content: space-between; /* Space between text and image */
-             margin-bottom: 50px; /* Space between sections */
-         }
-
-         /* Text part */
-         .research-section p {
-             width: 55%; /* Text takes up 55% of the width */
-             padding-right: 20px; /* Space between text and image */
-         }
-
-         /* Image part */
-         .research-section img {
-             width: 40%; /* Image takes up 40% of the width */
-             margin-top: 20px; /* Top margin */
-             margin-left: 20px; /* Space between text and image */
-         }
-
-         /* Optional: Space between research sections */
-         section {
-             margin-bottom: 50px;
-         }
-
-         /* Optional: Adjust the <hr> lines */
-         hr {
-             margin-top: 40px;
-             margin-bottom: 40px;
-             border: 1px solid #ccc;
-         }
-      </style>
    </head>
    <body>
       <div class="container">
@@ -97,43 +61,53 @@
                      </p>
                   </div>
                </section>
-               <section id="research1" class="research-section">
-                  <h4>Agroecosystem Model Development</h4>
-                  <p>
-                     We develop agroecosystem models that represent crop and grassland growth, management practices, soil carbon and nitrogen cycling, water balance, and greenhouse gas emissions. 
-                     Our work includes process-based models, data-driven approaches, and hybrid frameworks that integrate mechanistic understanding with machine learning to 
-                     capture interactions among management, climate, and biophysical processes across field to regional scales.
-                  </p>
-                  <img src="images/ResearchArea1.jpg" alt="research1"/>
-               </section>
-               <hr>
-               <section id="research2" class="research-section">
-                  <h4>Sustainable Agricultural Management Practices</h4>
-                  <p>
-                     We examine how agricultural management practices (e.g., tillage, cover cropping, irrigation, and nutrient management) influence productivity, yield stability, 
-                     soil health, and environmental outcomes. This research evaluates management strategies across cropping systems to identify practices that support long-term
-                     sustainability and resilience under variable environmental conditions.
-                  </p>
-                  <img src="images/ResearchArea2.jpg" alt="research2"/>
-               </section>
-               <hr>
-               <section id="research3" class="research-section">
-                  <h4>Integrated Crop–Livestock Systems</h4>
-                  <p>
-                     We study integrated crop–livestock systems to understand how linking cropping and grazing affects productivity, resource use efficiency, soil carbon storage, 
-                     and greenhouse gas emissions. Our work focuses on cropland–livestock interactions, grazing management, and nutrient recycling, with an emphasis on system-level 
-                     tradeoffs and synergies.
-                  </p>
-                  <img src="images/ResearchArea3.jpg" alt="research3"/>
-               </section>
-               <hr>
-               <section id="research4" class="research-section">
-                  <h4>Agroecosystem Responses to Climate Extremes and Environmental Change</h4>
-                  <p>
-                     We investigate how agroecosystems respond to CO2 fertilization, climate change, and extreme events such as droughts and heatwaves. Using models, remote sensing, 
-                     and observational data, this research assesses vulnerability, resilience, and recovery of agricultural systems under current and future environmental conditions.
-                  </p>
-                  <img src="images/ResearchArea4.jpg" alt="research4"/>
+               <section id="statemet">
+                  <div class="row-fluid">
+                     <div class="span12">
+                        <section id="research1">
+                           <h4>Agroecosystem Model Development</h4>
+                           <br/>
+                           <p>
+                              We develop agroecosystem models that represent crop and grassland growth, management practices, soil carbon and nitrogen cycling, water balance, and greenhouse gas emissions. 
+                              Our work includes process-based models, data-driven approaches, and hybrid frameworks that integrate mechanistic understanding with machine learning to 
+                              capture interactions among management, climate, and biophysical processes across field to regional scales.
+                           </p>
+                           <img src="images/ResearchArea1.jpg" class="float-right" alt="research1"/>
+                        </section>
+                        <hr>
+                        <section id="research2">
+                           <h4>Sustainable Agricultural Management Practices</h4>
+                           <br/>
+                           <p>
+                              We examine how agricultural management practices (e.g., tillage, cover cropping, irrigation, and nutrient management) influence productivity, yield stability, 
+                              soil health, and environmental outcomes. This research evaluates management strategies across cropping systems to identify practices that support long-term
+                              sustainability and resilience under variable environmental conditions.
+                           </p>
+                           <img src="images/ResearchArea2.jpg" class="float-right" alt="research2"/>
+                        </section>
+                        <hr>
+                        <section id="research3">
+                           <h4>Integrated Crop–Livestock Systems</h4>
+                           <br/>
+                           <p>
+                              We study integrated crop–livestock systems to understand how linking cropping and grazing affects productivity, resource use efficiency, soil carbon storage, 
+                              and greenhouse gas emissions. Our work focuses on cropland–livestock interactions, grazing management, and nutrient recycling, with an emphasis on system-level 
+                              tradeoffs and synergies.
+                           </p>
+                           <img src="images/ResearchArea3.jpg" class="float-right" alt="research3"/>
+                        </section>
+                        <hr>
+                        <section id="research4">
+                           <h4>Agroecosystem Responses to Climate Extremes and Environmental Change</h4>
+                           <br/>
+                           <p>
+                              We investigate how agroecosystems respond to CO2 fertilization, climate change, and extreme events such as droughts and heatwaves. Using models, remote sensing, 
+                              and observational data, this research assesses vulnerability, resilience, and recovery of agricultural systems under current and future environmental conditions.
+                           </p>
+                           <img src="images/ResearchArea4.jpg" class="float-right" alt="research4"/>
+                        </section>
+                     </div>
+                  </div>
                </section>
             </div>
          </div>
@@ -165,8 +139,19 @@
             </div>
          </div>
       </footer>
-      <!-- Le javascript -->
+
+      <!-- Le javascript
+         ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
       <script src="js/jquery-1.9.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
+      <script>
+         $(document).ready(function() {
+             $(document.body).scrollspy({
+                 target: "#navparent"
+             });
+         });
+         
+      </script>
    </body>
 </html>
