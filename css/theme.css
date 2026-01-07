@@ -591,28 +591,34 @@ header#overview .lead {
   height: auto;
 }
 
-<style>
-  /* One research block spacing + separator */
-  .research-block { padding: 25px 0; }
-  .research-block + .research-block { border-top: 1px solid #ddd; }
-
-  /* Keep text readable */
-  .research-text h4 { margin-top: 0; }
-
-  /* Image column */
-  .research-media img {
-    display: block;
-    width: 100%;        /* fill the right column */
-    height: auto;
-    margin-top: 6px;    /* small spacing under title line */
-  }
-
-  /* Clear any floats that might leak in from theme.css */
-  .research-block { clear: both; overflow: hidden; }
-</style>
 
 /* Align research titles with paragraph top (Bootstrap 2 fix) */
 .research-text h4 {
   margin-top: 0;
   padding-top: 0;
 }
+
+/* =========================
+   Research page layout
+   ========================= */
+
+.research-block { padding: 25px 0; }
+.research-block + .research-block { border-top: 1px solid #ddd; }
+
+/* Title as its own full-width line */
+.research-title{
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+/* Two-column row under the title */
+.research-media img{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+
+/* Prevent any float leaks */
+.research-block { clear: both; overflow: hidden; }
