@@ -590,3 +590,23 @@ header#overview .lead {
   max-width: 140px;   /* adjust if needed */
   height: auto;
 }
+
+<style>
+  /* One research block spacing + separator */
+  .research-block { padding: 25px 0; }
+  .research-block + .research-block { border-top: 1px solid #ddd; }
+
+  /* Keep text readable */
+  .research-text h4 { margin-top: 0; }
+
+  /* Image column */
+  .research-media img {
+    display: block;
+    width: 100%;        /* fill the right column */
+    height: auto;
+    margin-top: 6px;    /* small spacing under title line */
+  }
+
+  /* Clear any floats that might leak in from theme.css */
+  .research-block { clear: both; overflow: hidden; }
+</style>
