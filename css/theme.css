@@ -610,3 +610,9 @@ header#overview .lead {
   /* Clear any floats that might leak in from theme.css */
   .research-block { clear: both; overflow: hidden; }
 </style>
+
+/* Align research titles with paragraph top (Bootstrap 2 fix) */
+.research-text h4 {
+  margin-top: 0;
+  padding-top: 0;
+}
