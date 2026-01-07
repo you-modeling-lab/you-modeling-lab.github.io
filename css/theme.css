@@ -631,3 +631,25 @@ header#overview .lead {
 
 /* Prevent any float leaks */
 .research-block { clear: both; overflow: hidden; }
+
+/* --- Recent News: force equal image boxes --- */
+.feature-item .news-img{
+  width: 100%;
+  height: 220px;          /* adjust if you want taller/shorter */
+  overflow: hidden;
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center */
+}
+
+/* Make the image scale consistently inside the box */
+.feature-item .news-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;     /* show full logo, no cropping */
+  display: block;
+
+  /* override your earlier theme.css rule */
+  max-width: none !important;
+}
+
