@@ -653,3 +653,28 @@ header#overview .lead {
   max-width: none !important;
 }
 
+/* =========================
+   People page: uniform headshots
+   ========================= */
+
+/* wrapper: works for both <a.thumbnail> and <div.thumbnail> */
+.people-thumb{
+  width: 160px;          /* adjust */
+  height: 200px;         /* adjust */
+  overflow: hidden;
+  margin: 0 auto;        /* center in span3 */
+}
+
+/* ensure image fills the box consistently */
+.people-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* crop to fill */
+  display: block;        /* remove baseline gap */
+}
+
+/* if you want a little space between image and text */
+.people-row .span3{
+  text-align: center;
+}
+
