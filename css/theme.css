@@ -652,3 +652,67 @@ header#overview .lead {
   /* override your earlier theme.css rule */
   max-width: none !important;
 }
+
+
+/* =========================
+   Mobile fixes (Bootstrap 2)
+   ========================= */
+@media (max-width: 767px){
+
+  /* Give container padding on small screens */
+  .container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* 1) Navbar: stop forcing table layout */
+  .navbar .nav{
+    display: block !important;
+    width: auto !important;
+  }
+  .navbar .nav li{
+    display: block !important;
+    width: auto !important;
+    float: none !important;
+  }
+  .navbar .nav li a{
+    text-align: left !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  /* 2) Bootstrap 2 grid: stack spans */
+  .row-fluid [class*="span"]{
+    float: none !important;
+    display: block !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  /* 3) Media/News cards: remove fixed widths/heights */
+  #media .post_row .post{
+    width: auto !important;
+    height: auto !important;
+  }
+  #media .post_row .post .img img{
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+
+  /* 4) Any image should never overflow */
+  img{
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 5) Footer: don’t force flex on small screens */
+  #footer .row-fluid{
+    display: block !important;
+  }
+  #footer a img{
+    margin-top: 15px !important;
+  }
+}
+
