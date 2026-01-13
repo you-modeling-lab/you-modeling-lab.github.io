@@ -13,9 +13,9 @@
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
       <link href="css/theme.css" rel="stylesheet">
 
-      <!-- Page-specific styles (safe to keep here) -->
+      <!-- Page-specific styles -->
       <style>
-         /* News list styling that matches a clean lab-website look */
+         /* News list styling */
          #news { margin-top: 10px; }
          .news-year { margin: 18px 0 8px; padding-bottom: 6px; border-bottom: 1px solid #e6e6e6; }
          .news-item { padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
@@ -34,10 +34,14 @@
             vertical-align: middle;
          }
          .news-item p { margin: 0; }
+
+         /* Give anchors a little breathing room under fixed nav */
+         .scroll-anchor { padding-top: 80px; margin-top: -80px; }
       </style>
    </head>
 
-   <body>
+   <!-- IMPORTANT: enable scrollspy (Bootstrap 2) -->
+   <body data-spy="scroll" data-target="#navparent" data-offset="120">
       <div class="container">
          <header class="jumbotron subhead" id="overview">
             <p class="lead"> Virginia Tech </p>
@@ -65,104 +69,127 @@
 
          <hr>
 
-         <!-- NEWS -->
-         <div id="news">
-            <h2>News</h2>
-            <p>Updates from the Agroecosystem Modeling Lab.</p>
+         <!-- Layout with left sidebar + main content (like publications.html) -->
+         <div class="row-fluid">
 
-            <h4 class="news-year">2026</h4>
-
-            <div class="news-item">
-               <p>
-                  <span class="news-date">January 2026</span>
-                  We received the Center for Sustainable Engagement in the Arctic (CSEA) Arctic Lens Mini-Grant.
-                  <span class="news-tag">Grant</span>
-               </p>
+            <!-- LEFT SIDEBAR -->
+            <div class="span3 bs-docs-sidebar" id="navparent">
+               <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="200" data-offset-bottom="260">
+                  <li><a href="#newsTop">News</a></li>
+                  <li><a class="subhead" href="#y2026">2026</a></li>
+                  <li><a class="subhead" href="#y2025">2025</a></li>
+               </ul>
             </div>
 
-            <h4 class="news-year">2025</h4>
+            <!-- MAIN CONTENT -->
+            <div class="span8 offset1">
+               <div id="news">
+                  <div id="newsTop" class="scroll-anchor"></div>
+                  <h2>News</h2>
+                  <p>Updates from the Agroecosystem Modeling Lab.</p>
 
-            <div class="news-item">
-               <p>
-                  <span class="news-date">December 2025</span>
-                  Congratulations to Hua on receiving the Virginia Tech Presidential Postdoctoral Fellowship.
-                  <span class="news-tag">Grant</span>
-               </p>
-            </div>
+                  <!-- 2026 -->
+                  <section id="y2026" class="scroll-anchor">
+                     <h4 class="news-year">2026</h4>
 
-            <div class="news-item">
-               <p>
-                  <span class="news-date">December 2025</span>
-                  Congratulations to Yikun on receiving the Translational Plant Sciences Center (TPSC) Mentee–Faculty Grant.
-                  <span class="news-tag">Grant</span>
-               </p>
-            </div>
+                     <div class="news-item">
+                        <p>
+                           <span class="news-date">January 2026</span>
+                           We received the Center for Sustainable Engagement in the Arctic (CSEA) Arctic Lens Mini-Grant.
+                           <span class="news-tag">Grant</span>
+                        </p>
+                     </div>
+                  </section>
 
-            <div class="news-item">
-               <p>
-                  <span class="news-date">December 2025</span>
-                  Dr. You was selected as a 2026 College of Agriculture and Life Sciences (CALS) Global Opportunity Initiative Fellow.
-                  <span class="news-tag">Program</span>
-               </p>
-            </div>
+                  <!-- 2025 -->
+                  <section id="y2025" class="scroll-anchor">
+                     <h4 class="news-year">2025</h4>
 
-            <div class="news-item">
-               <p>
-                  <span class="news-date">December 2025</span>
-                  We received the New Faculty Mentoring Grant.
-                  <span class="news-tag">Grant</span>
-               </p>
-            </div>
-            
-            <div class="news-item">
-               <p>
-                  <span class="news-date">December 2025</span>
-                  We are delighted to welcome Dr. Hua Yan as the lab’s first postdoctoral researcher.
-                  <span class="news-tag">People</span>
-               </p>
-            </div>
+                     <div class="news-item">
+                        <p>
+                           <span class="news-date">December 2025</span>
+                           Congratulations to Hua on receiving the Virginia Tech Presidential Postdoctoral Fellowship.
+                           <span class="news-tag">Grant</span>
+                        </p>
+                     </div>
 
-            <div class="news-item">
-               <p>
-                  <span class="news-date">December 2025</span>
-                  We are delighted to welcome Rose Cook as the lab’s first undergraduate student.
-                  <span class="news-tag">People</span>
-               </p>
-            </div>
+                     <div class="news-item">
+                        <p>
+                           <span class="news-date">December 2025</span>
+                           Congratulations to Yikun on receiving the Translational Plant Sciences Center (TPSC) Mentee–Faculty Grant.
+                           <span class="news-tag">Grant</span>
+                        </p>
+                     </div>
 
-            <div class="news-item">
-               <p>
-                  <span class="news-date">November 2025</span>
-                  Dr. You became an affiliated faculty member of the Global Change Center (GCC) at Virginia Tech.
-                  <span class="news-tag">Affiliation</span>
-               </p>
-            </div>
+                     <div class="news-item">
+                        <p>
+                           <span class="news-date">December 2025</span>
+                           Dr. You was selected as a 2026 College of Agriculture and Life Sciences (CALS) Global Opportunity Initiative Fellow.
+                           <span class="news-tag">Program</span>
+                        </p>
+                     </div>
 
-            <div class="news-item">
-               <p>
-                  <span class="news-date">October 2025</span>
-                  Dr. You became an affiliated faculty member of the Translational Plant Sciences Center (TPSC) at Virginia Tech.
-                  <span class="news-tag">Affiliation</span>
-               </p>
-            </div>
+                     <div class="news-item">
+                        <p>
+                           <span class="news-date">December 2025</span>
+                           We received the New Faculty Mentoring Grant.
+                           <span class="news-tag">Grant</span>
+                        </p>
+                     </div>
 
-            <div class="news-item">
-               <p>
-                  <span class="news-date">August 2025</span>
-                  We are delighted to welcome Yikun Zhang as the lab’s first graduate student.
-                  <span class="news-tag">People</span>
-               </p>
-            </div>
+                     <div class="news-item">
+                        <p>
+                           <span class="news-date">December 2025</span>
+                           We are delighted to welcome Dr. Hua Yan as the lab’s first postdoctoral researcher.
+                           <span class="news-tag">People</span>
+                        </p>
+                     </div>
 
-            <div class="news-item">
-               <p>
-                  <span class="news-date">August 2025</span>
-                  Dr. You joined the School of Plant and Environmental Sciences at Virginia Tech.
-                  <span class="news-tag">People</span>
-               </p>
+                     <div class="news-item">
+                        <p>
+                           <span class="news-date">December 2025</span>
+                           We are delighted to welcome Rose Cook as the lab’s first undergraduate student.
+                           <span class="news-tag">People</span>
+                        </p>
+                     </div>
+
+                     <div class="news-item">
+                        <p>
+                           <span class="news-date">November 2025</span>
+                           Dr. You became an affiliated faculty member of the Global Change Center (GCC) at Virginia Tech.
+                           <span class="news-tag">Affiliation</span>
+                        </p>
+                     </div>
+
+                     <div class="news-item">
+                        <p>
+                           <span class="news-date">October 2025</span>
+                           Dr. You became an affiliated faculty member of the Translational Plant Sciences Center (TPSC) at Virginia Tech.
+                           <span class="news-tag">Affiliation</span>
+                        </p>
+                     </div>
+
+                     <div class="news-item">
+                        <p>
+                           <span class="news-date">August 2025</span>
+                           We are delighted to welcome Yikun Zhang as the lab’s first graduate student.
+                           <span class="news-tag">People</span>
+                        </p>
+                     </div>
+
+                     <div class="news-item">
+                        <p>
+                           <span class="news-date">August 2025</span>
+                           Dr. You joined the School of Plant and Environmental Sciences at Virginia Tech.
+                           <span class="news-tag">People</span>
+                        </p>
+                     </div>
+                  </section>
+
+               </div>
             </div>
          </div>
-         <!-- /NEWS -->
+         <!-- /row-fluid -->
 
       </div>
 
@@ -173,13 +200,13 @@
                   <h3>Contact Information</h3>
                   <p>Dr. Yongfa You<br>
                      Assistant Professor<br>
-                     Email: </b>yongfayou@vt.edu<br>
-                     Phone: </b>334-275-1676
+                     <b>Email:</b> yongfayou@vt.edu<br>
+                     <b>Phone:</b> 334-275-1676
                   </p>
                   <a href="mailto:yongfayou@vt.edu">Email</a>
                </div>
                <div class="span2">
-                  <img src="images/VT_White_Small.png" alt="research-lab-logo"/>
+                  <img src="images/VT_White_Small.png" alt="Virginia Tech logo"/>
                </div>
                <div class="span5">
                   <h3>Address</h3>
@@ -188,7 +215,7 @@
                      Saunders Hall (Room 404), Virginia Tech<br>
                      Blacksburg, VA 24060
                   </p>
-                  <a href="https://www.google.com/maps?q=Saunders+Hall+Virginia+Tech+Blacksburg+VA+24060" target="_blank">Show Map</a>
+                  <a href="https://www.google.com/maps?q=Saunders+Hall+Virginia+Tech+Blacksburg+VA+24060" target="_blank" rel="noopener">Show Map</a>
                </div>
             </div>
          </div>
@@ -197,11 +224,11 @@
       <!-- Le javascript -->
       <script src="js/jquery-1.9.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
+
+      <!-- Optional: keep this (works fine), but body data-spy already enables it -->
       <script>
          $(document).ready(function() {
-             $(document.body).scrollspy({
-                 target: "#navparent"
-             });
+            $(document.body).scrollspy({ target: "#navparent", offset: 120 });
          });
       </script>
    </body>
